@@ -21,8 +21,8 @@ re.config = {
 	
 	current:0,
 	
-	debug:false,
-	release:true
+	debug:true,
+	release:false
 
 };
 
@@ -55,9 +55,17 @@ re.scene.credits = 'credits';
 re.scene.score = 'score';
 
 re.ready(function(){
+
+    re.sys.init(re.config.canvas).start();
 	
-	re.sys.init(re.config.canvas).start();
-	
+    re.screen = re.e('screen')
+    .extend({
+    sizeX:480,
+    sizeY:320,
+    regX:480/2,
+    regY:320/2
+    });
+        
 	re.scene(re.scene.preload);
 	
 });

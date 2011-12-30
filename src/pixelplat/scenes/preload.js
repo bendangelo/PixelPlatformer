@@ -25,7 +25,9 @@ re.scene('preload')
 	
 	if(re.config.release){
 		re.load.path = '/assets/pixelplat/';
-	}
+	} else {
+        re.load.path = './assets/';
+    }
 	
 	var mar = 20;
 	//show link
